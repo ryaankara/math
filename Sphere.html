@@ -2,6 +2,39 @@
 <html>
 <head>
 <center> <title>Sphere</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+var rad = 0, height = 0;
+$(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
+    $("#myTextArea1").keypress(function (e) {
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Radius is "+$(this).val());
+            rad = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+
+$(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
+    $("#myTextArea2").keypress(function (e) {
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Height is "+$(this).val());
+	    height = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+
+var check = function(){ <!-- Adding function for calculating the volume and alerting to the user-->
+  if (rad != 0 && height != 0)
+   alert("The volume of your Cone is approximately " + (4 / 3) * rad * rad * rad * height * Math.PI);
+};
+
+</script>
 </head>
 
 <body bgcolor="BBBBBB">
@@ -15,10 +48,34 @@ Volume of a Sphere
 <a href="./Cube.html">Cube</a> |
 <a href="./RectangularPrism.html">Rectangular Prism</a> |
 <a href="./Cylinder.html">Cylinder</a> |
-<a href="./Cone.html">Cone</a> |
-<b>Sphere</b> |
-<a href="./Contact.html">Contact</a>
+<a href="./Cone.html">Cone</a> | <!-- Removed Contact Tab -->
+<b>Sphere</b> 
 </p>
+
+<h2>
+<p id="SphereImage"><img src="SpherePic.png" height="300" width="300"></img></p> <!-- Enlarged Image -->
+</h2>
+
+<form>
+<fieldset> <!-- Adding directions for calculating the volume -->
+<h3><center>
+To calculate the volume of a cone, use this equation: V = (4/3) x pi x r^3 x h
+<br></br>
+<br>Follow the step below to calculate your own volume</br>
+<label>Write the radius:</label> <!-- Adding text boxes for user to input their values-->
+ <textarea id = "myTextArea1"
+ rows = "1"
+ cols = "10"></textarea>
+<label>Write the height:</label>
+ <textarea id = "myTextArea2"
+ rows = "1"
+ cols = "10"></textarea>
+
+</fieldset>
+</form>
+
+</center></h3>
+
 
 </body>
 
