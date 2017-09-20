@@ -2,6 +2,51 @@
 <html>
 <head>
 <center> <title>Rectangular Prism</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+var length = 0, width = 0, height=0;
+$(function() {
+    $("#myTextArea1").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Length is "+$(this).val());
+            length = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+
+$(function() {
+    $("#myTextArea2").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Width is "+$(this).val());
+	    width = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+$(function() {
+    $("#myTextArea3").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Height is "+$(this).val());
+	    height = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+
+var check = function(){<!-- Adding function for calculating the volume and alerting to the user-->
+  if (length != 0 && width != 0 && height != 0)
+   alert("The volume of your rectangular prism is " + length * width * height);
+};
+
+
+</script>
 </head>
 
 <body bgcolor="BBBBBB">
@@ -16,29 +61,29 @@ Volume of a Rectangular Prism
 <b>Rectangular Prism</b> |
 <a href="./Cylinder.html">Cylinder</a> |
 <a href="./Cone.html">Cone</a> |
-<a href="./Sphere.html">Sphere</a> |
-<a href="./Contact.html">Contact</a>
+<a href="./Sphere.html">Sphere</a> <!-- Removed Contact Tab -->
 </p>
 
 <h2>
+<p id="RectPrismImage"><img src="RectangularPrismPic.png" height="220" width="330"></img></p> <!-- Enlarged Image -->
 </h2>
 
 <form>
 <fieldset> <!-- Adding directions for calculating volume -->
 <h3><center>
-To calculate the volume of a rectangular prism, you must use this equation: V = l x w x h
+To calculate the volume of a rectangular prism, use this equation: V = l x w x h
 <br></br>
 <br>Follow the step below to calculate your own volume</br> <!-- Adding textbox for user to input values -->
 <label>Write the length:</label>
- <textarea id = "myTextArea"
+ <textarea id = "myTextArea1"
  rows = "1"
  cols = "10"></textarea>
 <label>Write the width:</label>
- <textarea id = "myTextArea"
+ <textarea id = "myTextArea2"
  rows = "1"
  cols = "10"></textarea>
 <label>Write the height:</label>
- <textarea id = "myTextArea"
+ <textarea id = "myTextArea3"
  rows = "1"
  cols = "10"></textarea>
 </body>
