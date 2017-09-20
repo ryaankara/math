@@ -1,30 +1,53 @@
-#Title1
+#Title1 /* Modified style*/
 {
 	text-align: center;
-	color: red;
+	color: blue;
 	font-weight: bold;
-	font-size: 46px;
-	letter-spacing: 1.8px;
-	text-shadow: -2px 2px 2px red;
+	font-size: 40px;
+	letter-spacing: 1px;
 }
 
-#Title2
+#Title2 /* Modified style*/
 {
 	text-align: center;
-	color: red;
+	color: blue;
 	font-weight: bold;
-	font-size: 46px;
-	letter-spacing: 1.8px;
-	text-shadow: -2px 2px 2px red;
+	font-size: 40px;
+	letter-spacing: 1px;
 }
 
 
-#MainImage
+#MainImage 
 {
 	text-align: center;
 }
 
-#FrontText
+#CubeImage
+{
+	text-align: center;
+}
+
+#RectPrismImage /* Added css integration for the Rectangular Prism Picture*/
+{
+	text-align: center;
+}
+
+#CylinderImage /* Added css integration for the Cylinder Picture*/
+{
+	text-align: center;
+}
+
+#ConeImage /* Added css integration for Cone Picture*/
+{
+	text-align: center;
+}
+
+#SphereImage /* Added css integration for the Sphere Picture*/
+{
+	text-align: center;
+}
+
+#FrontText /* Modified style*/
 {
 	color: blue;
 	font-weight: bold;
