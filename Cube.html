@@ -2,6 +2,27 @@
 <html>
 <head>
 <center> <title>Cube</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+var side = 0;
+$(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
+    $("#myTextArea1").keypress(function (e) {
+        if(e.which == 13) {
+            //submit form via ajax, this is not JS but server side scripting so not showing here
+            alert("Side Length is "+$(this).val());
+            side = $(this).val();
+            e.preventDefault();
+	    check();
+        }
+    });
+});
+
+var check = function(){<!-- Adding function for calculating the volume and alerting to the user-->
+  if (side != 0)
+   alert("The volume of your cube is " + side * side * side);
+};
+
+</script>
 </head>
 
 <body bgcolor="BBBBBB">
@@ -16,22 +37,22 @@ Volume of a Cube
 <a href="./RectangularPrism.html">Rectangular Prism</a> |
 <a href="./Cylinder.html">Cylinder</a> |
 <a href="./Cone.html">Cone</a> |
-<a href="./Sphere.html">Sphere</a> |
+<a href="./Sphere.html">Sphere</a> <!-- Removed Contact Tab -->
 </center>
 </p>
 
 <h2>
-<p id="CubeImage"><img src="CubePic.png" height="150" width="160"></img></p>
+<p id="CubeImage"><img src="CubePic.png" height="300" width="340"></img></p> <!--Enlarged Image -->
 </h2>
 
 <form>
 <fieldset> <!-- Adding directions for calculating volume -->
 <h3><center>
-To calculate the volume of a cube, you must use this equation: V = s^3
+To calculate the volume of a cube, use this equation: V = s^3
 <br></br>
 <br>Follow the step below to calculate your own volume</br>
-<label>Write the length of the side:</label> <!-- Adding textbox for user to input values -->
- <textarea id = "myTextArea"
+<label>Write the side-length:</label> <!-- Adding textbox for user to input values -->
+ <textarea id = "myTextArea1"
  rows = "1"
  cols = "10"></textarea>
 
