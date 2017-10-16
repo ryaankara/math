@@ -4,7 +4,7 @@
 <center> <title>Cube</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script> 
-var side = 0;
+var side = 0; <!-- initializing variable to calculate the volume -->
 $(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
     $("#myTextArea1").keypress(function (e) {
         if(e.which == 13) {
@@ -19,24 +19,24 @@ $(function() { <!-- Adding function for receiving user-inputted value and alerti
 
 var check = function(){<!-- Adding function for calculating the volume and alerting to the user-->
   if (side != 0)
-   alert("The volume of your cube is " + side * side * side);
+   alert("The Volume of your Cube is " + side * side * side);
 };
 
-</script>
+</script> <!-- integration of javascript -->
 </head>
 
-<body bgcolor="BBBBBB">
+<body bgcolor="0DE971"> <!-- backGround color -->
 
 <body a link="black" vlink="black">
 <h1>
 Volume of a Cube
 </h1>
 <p>
-<center>
-<a href="./index.html">Home</a> | <b>Cube</b> |
-<a href="./RectangularPrism.html">Rectangular Prism</a> |
-<a href="./Cylinder.html">Cylinder</a> |
-<a href="./Cone.html">Cone</a> |
+<center> 
+<a href="./index.html">Home</a> | <b>Cube</b> | <!-- linking of tabs -->
+<a href="./RectangularPrism.html">Rectangular Prism</a> | <!-- linking of tabs -->
+<a href="./Cylinder.html">Cylinder</a> | <!-- linking of tabs -->
+<a href="./Cone.html">Cone</a> | <!-- linking of tabs -->
 <a href="./Sphere.html">Sphere</a> <!-- Removed Contact Tab -->
 </center>
 </p>
@@ -51,6 +51,7 @@ Volume of a Cube
 To calculate the volume of a cube, use this equation: V = s^3
 <br></br>
 <br>Follow the step below to calculate your own volume</br>
+<br></br>
 <label>Write the side-length:</label> <!-- Adding textbox for user to input values -->
  <textarea id = "myTextArea1"
  rows = "1"
