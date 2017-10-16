@@ -4,8 +4,8 @@
 <center> <title>Rectangular Prism</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script> 
-var length = 0, width = 0, height=0;
-$(function() {
+var length = 0, width = 0, height=0; <!-- initializing variables to calculate volume -->
+$(function() { <!-- alert function to confirm value with user -->
     $("#myTextArea1").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
         if(e.which == 13) {
             //submit form via ajax, this is not JS but server side scripting so not showing here
@@ -17,7 +17,7 @@ $(function() {
     });
 });
 
-$(function() {
+$(function() { <!-- alert function to confirm value with user -->
     $("#myTextArea2").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
         if(e.which == 13) {
             //submit form via ajax, this is not JS but server side scripting so not showing here
@@ -28,7 +28,7 @@ $(function() {
         }
     });
 });
-$(function() {
+$(function() { <!-- alert function to confirm value with user -->
     $("#myTextArea3").keypress(function (e) {<!-- Adding function for receiving user-inputted value and alerting it back to user-->
         if(e.which == 13) {
             //submit form via ajax, this is not JS but server side scripting so not showing here
@@ -42,18 +42,19 @@ $(function() {
 
 var check = function(){<!-- Adding function for calculating the volume and alerting to the user-->
   if (length != 0 && width != 0 && height != 0)
-   alert("The volume of your rectangular prism is " + length * width * height);
+   alert("The Volume of your Rectangular Prism is " + length * width * height);
+<!-- alert function to send value of volume to user -->
 };
 
 
-</script>
+</script> <!-- integration of javascript -->
 </head>
 
-<body bgcolor="BBBBBB">
+<body bgcolor="CCE725"> <!-- background color -->
 
 <body a link="black" vlink="black">
 <h1>
-Volume of a Rectangular Prism
+Volume of a Rectangular Prism <!-- linking tabs -->
 </h1>
 <p>
 <a href="./index.html">Home</a> |
@@ -73,16 +74,17 @@ Volume of a Rectangular Prism
 <h3><center>
 To calculate the volume of a rectangular prism, use this equation: V = l x w x h
 <br></br>
-<br>Follow the step below to calculate your own volume</br> <!-- Adding textbox for user to input values -->
-<label>Write the length:</label>
+<br>Follow the steps below to calculate your own volume</br> <!-- Adding textbox for user to input values -->
+<br></br>
+<label>Write the length:</label> <!-- creating textboxes -->
  <textarea id = "myTextArea1"
  rows = "1"
  cols = "10"></textarea>
-<label>Write the width:</label>
+<label>Write the width:</label> <!-- creating textboxes -->
  <textarea id = "myTextArea2"
  rows = "1"
  cols = "10"></textarea>
-<label>Write the height:</label>
+<label>Write the height:</label> <!-- creating textboxes -->
  <textarea id = "myTextArea3"
  rows = "1"
  cols = "10"></textarea>
