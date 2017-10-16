@@ -4,7 +4,7 @@
 <center> <title>Sphere</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script> 
-var rad = 0, height = 0;
+var rad = 0, height = 0; <!-- initializing variables to calculate volume -->
 $(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
     $("#myTextArea1").keypress(function (e) {
         if(e.which == 13) {
@@ -31,23 +31,23 @@ $(function() { <!-- Adding function for receiving user-inputted value and alerti
 
 var check = function(){ <!-- Adding function for calculating the volume and alerting to the user-->
   if (rad != 0 && height != 0)
-   alert("The volume of your Cone is approximately " + (4 / 3) * rad * rad * rad * height * Math.PI);
+   alert("The Volume of your Sphere is approximately " + (4 / 3) * rad * rad * rad * height * Math.PI);
 };
 
-</script>
+</script> <!-- integration of javascript -->
 </head>
 
-<body bgcolor="BBBBBB">
+<body bgcolor="FFB671"> <!-- background color -->
 
 <body a link="black" vlink="black">
 <h1>
 Volume of a Sphere
 </h1>
 <p>
-<a href="./index.html">Home</a> |
-<a href="./Cube.html">Cube</a> |
-<a href="./RectangularPrism.html">Rectangular Prism</a> |
-<a href="./Cylinder.html">Cylinder</a> |
+<a href="./index.html">Home</a> | <!-- linking of tabs -->
+<a href="./Cube.html">Cube</a> | <!-- linking of tabs -->
+<a href="./RectangularPrism.html">Rectangular Prism</a> | <!-- linking of tabs -->
+<a href="./Cylinder.html">Cylinder</a> | <!-- linking of tabs -->
 <a href="./Cone.html">Cone</a> | <!-- Removed Contact Tab -->
 <b>Sphere</b> 
 </p>
@@ -61,12 +61,13 @@ Volume of a Sphere
 <h3><center>
 To calculate the volume of a sphere, use this equation: V = (4/3) x pi x r^3 x h
 <br></br>
-<br>Follow the step below to calculate your own volume</br>
+<br>Follow the steps below to calculate your own volume</br>
+<br></br>
 <label>Write the radius:</label> <!-- Adding text boxes for user to input their values-->
  <textarea id = "myTextArea1"
  rows = "1"
  cols = "10"></textarea>
-<label>Write the height:</label>
+<label>Write the height:</label> <!-- Adding text boxes for user to input their values-->
  <textarea id = "myTextArea2"
  rows = "1"
  cols = "10"></textarea>
