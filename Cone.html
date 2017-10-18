@@ -2,37 +2,15 @@
 <html>
 <head>
 <center> <title>Cone</title>
+
+<script src = "ConeJS.js"> </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script> 
-var rad = 0, height = 0; <!-- initializing variables to calculate volume -->
-$(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
-    $("#myTextArea1").keypress(function (e) {
-        if(e.which == 13) {
-            //submit form via ajax, this is not JS but server side scripting so not showing here
-            alert("Radius is "+$(this).val());
-            rad = $(this).val();
-            e.preventDefault();
-	    check();
-        }
-    });
-});
 
-$(function() { <!-- Adding function for receiving user-inputted value and alerting it back to user-->
-    $("#myTextArea2").keypress(function (e) {
-        if(e.which == 13) {
-            //submit form via ajax, this is not JS but server side scripting so not showing here
-            alert("Height is "+$(this).val());
-	    height = $(this).val();
-            e.preventDefault();
-	    check();
-        }
-    });
-});
+$(func7);
 
-var check = function(){ <!-- Adding function for calculating the volume and alerting to the user-->
-  if (rad != 0 && height != 0)
-   alert("The Volume of your Cone is approximately " + (1 / 3) * rad * rad * height * Math.PI);
-};
+$(func8);
 
 </script> <!-- integration of javascript -->
 </head>
